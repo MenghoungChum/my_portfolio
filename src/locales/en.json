@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "works": "Works",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Hi, I'm Menghoung",
+    "subtitle": "I am a passionate Web Developer with strong knowledge in front-end development and basic back-end understanding. I specialize in building responsive, user-friendly, and modern websites using HTML, CSS, JavaScript, and Vue.js. I am looking for an opportunity to contribute to a professional development team and grow my technical skills."
+  },
+  "homeButton": {
+    "hire" : "Hire me",
+    "download": "Donwnload Resume"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I am passionate about networking and web development."
+  },
+  "certificates": {
+    "title": "Certificates",
+    "items": [
+      {
+        "title": "Cisco Networking Essentials",
+        "issuer": "Cisco Networking Academy",
+        "year": "2025",
+        "description": "Successfully completed training covering networking fundamentals, routing, switching, and network security."
+      },
+      {
+        "title": "Introduction to Cybersecurity",
+        "issuer": "Cisco Networking Academy",
+        "year": "2025",
+        "description": "Gained foundational knowledge in cybersecurity concepts including threats, attacks, and basic defense mechanisms."
+      },
+      {
+        "title": "Vue.js Fundamentals",
+        "issuer": "Online Course",
+        "year": "2026",
+        "description": "Learned core Vue.js concepts including components, reactivity, Composition API, and state management."
+      }
+    ]
+  },
+  "buttnCertificate": {
+    "view": "View Certificate",
+    "Download": "Download"
+  }
+}
