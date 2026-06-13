@@ -1,13 +1,14 @@
 <template>
-    <section class="py-20 px-6">
+    <section class="py-20">
         <!-- Section Title -->
-        <div class="text-center mb-14">
+        <div class="text-center mb-14"
+            data-aos="fade-up"
+        >
             <h2 class="text-4xl font-bold dark:text-white">
-                My Certificates
+                {{ translate.t('certificate') }}
             </h2>
             <p class="mt-4 text-gray-600 dark:text-gray-400">
-                Professional courses and certifications that support my skills
-                in networking and web development.
+                {{ translate.t('certificateTitle') }}
             </p>
         </div>
 
@@ -17,6 +18,8 @@
             <div
                 v-for="(cert, index) in certificates"
                 :key="index"
+                data-aos="zoom-in-up"
+                :data-aos-delay="index * 100"
                 class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
             >
                 <!-- Certificate Image -->
@@ -53,7 +56,7 @@
                             download
                             class="px-4 py-2 border border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-700 transition"
                         >
-                            {{ translate.t('buttnCertificate.Download') }}
+                            <i class="fa-solid fa-cloud-arrow-down"></i> {{ translate.t('buttnCertificate.Download') }}
                         </a>
                     </div>
                 </div>

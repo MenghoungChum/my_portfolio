@@ -43,5 +43,88 @@
   "buttnCertificate": {
     "view": "View Certificate",
     "Download": "Download"
+  },
+  "education":{
+    "university": {
+      "title": "Bachelor of Information Technology",
+      "universityName":"Royal University Of Phnom Penh", 
+      "statment1": "Currently pursuing a degree in Information Technology with a strong interest in Web Development and modern technologies.",
+      "statment2": "Developed knowledge in programming, networking, and software development through academic projects and self-learning."
+    },
+    
+    "highSchool":{
+      "title": "High School Diploma",
+      "SchoolName": "Heng Samren High School",
+      "statment3": "Successfully completed high school education with Grade A in the national examination.",
+      "statment4": "Demonstrated strong academic performance, responsibility, and dedication to learning."
+    },
+     "present": "present"
+  },
+   "projects": [
+    {
+      "id": 1,
+      "name": "E-Commerce Website",
+      "description": "Full stack online shop with cart system and payment UI.",
+      "tech": ["Vue", "Tailwind", "Node"],
+      "live": "#",
+      "github": "#"
+    },
+    {
+      "id": 2,
+      "name": "Portfolio Website",
+      "description": "Personal portfolio with modern UI and animations.",
+      "tech": ["Vue", "Tailwind"],
+      "live": "#",
+      "github": "#"
+    },
+    {
+      "id": 3,
+      "name": "Admin Dashboard",
+      "description": "Dashboard for managing users and analytics.",
+      "tech": ["Vue", "Chart.js"],
+      "live": "#",
+      "github": "#"
+    }
+  ],
+  "educationTitle": "About my education",
+  "certificate": "My Certificates",
+  "certificateTitle": "Professional courses and certifications that support my skills in networking and web development.",
+  "skill": {
+    "title": "Technical Skills",
+    "experience": {
+      "title": "Work Experience"
+    },
+    "project1": {
+      "title": "Frontend Developer",
+      "description": "Build modern web apps using Vue.js, Tailwind CSS, and REST APIs."
+    },
+    "project2": {
+      "title": "Web Projects",
+      "description": "E-commerce, Portfolio, Admin Dashboard"
+    }
+  },
+  "contact": {
+    "bigTitle": "Contact Me",
+    "block1": {
+      "title": "Email"
+    },
+    "block2": {
+      "title": "Phone"
+    },
+    "block3": {
+      "title": "Location"
+    },
+    "contactField": {
+      "block1": {
+        "title": "email",
+        "placeHolder": "Enter your email"
+      },
+      "block2": {
+        "title": "Message",
+        "placeHolder": "Write your message"
+      }
+    },
+    "button": "Send Message"
   }
+  
 }
