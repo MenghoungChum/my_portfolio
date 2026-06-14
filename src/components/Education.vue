@@ -7,11 +7,11 @@
             {{translate.t('educationTitle')}}
         </h2>
 
-        <div class="w-full h-162.5 flex items-center justify-between">
+        <div class="w-full md:h-162.5 h-auto flex flex-wrap items-center justify-between">
 
             <!-- Image -->
             <div
-                class="w-[35%] h-full flex items-center justify-center"
+                class="md:w-[35%] w-full h-full flex items-center justify-center"
                 data-aos="zoom-in-right"
                 data-aos-duration="1000"
             >
@@ -22,7 +22,7 @@
                 >
             </div>
 
-            <div class="w-[60%] space-y-8">
+            <div class="md:w-[60%] w-full space-y-8">
 
                 <!-- University -->
                 <div

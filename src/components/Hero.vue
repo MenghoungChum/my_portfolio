@@ -1,10 +1,10 @@
 <template>
     <div>
-        <div class="w-full h-167 flex justify-center items-center">
+        <div class="w-full md:h-167 h-auto flex flex-wrap justify-center items-center">
 
             <!-- Left Content -->
             <div
-                class="w-[50%]"
+                class="md:w-[50%] w-full py-10 md:py-0"
                 data-aos="fade-right"
                 data-aos-duration="1000"
             >
@@ -39,7 +39,7 @@
 
             <!-- Right Image -->
             <div
-                class="w-[50%] h-full flex justify-center"
+                class="md:w-[50%] w-full h-full flex justify-center"
                 data-aos="fade-left"
                 data-aos-duration="1200"
             >
