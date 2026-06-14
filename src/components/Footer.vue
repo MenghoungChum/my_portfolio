@@ -4,7 +4,7 @@
     data-aos="fade-up"
   >
 
-    <div class="max-w-7xl mx-auto py-10">
+    <div class="max-w-7xl mx-auto py-10 px-6 lg:px-0">
 
       <!-- Top Section -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
