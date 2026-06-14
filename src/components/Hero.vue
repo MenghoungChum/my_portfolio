@@ -4,7 +4,7 @@
 
             <!-- Left Content -->
             <div
-                class="md:w-[50%] w-full py-10 md:py-0"
+                class="md:w-[50%] w-full min-w-0 py-10 md:py-0"
                 data-aos="fade-right"
                 data-aos-duration="1000"
             >
@@ -39,7 +39,7 @@
 
             <!-- Right Image -->
             <div
-                class="md:w-[50%] w-full h-full flex justify-center"
+                class="md:w-[50%] w-full min-w-0 h-full flex justify-center"
                 data-aos="fade-left"
                 data-aos-duration="1200"
             >

@@ -1,5 +1,5 @@
 <template lang="">
-    <div class="max-w-7xl mx-auto mt-16 px-6 lg:px-0">
+    <div class="max-w-7xl mx-auto mt-16 px-4 md:px-6 lg:px-0 overflow-hidden">
         <Hero/>
         <Education/>
         <Certificate/>

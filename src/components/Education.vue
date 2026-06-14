@@ -11,7 +11,7 @@
 
             <!-- Image -->
             <div
-                class="md:w-[35%] w-full h-full flex items-center justify-center"
+                class="md:w-[35%] w-full min-w-0 h-full flex items-center justify-center"
                 data-aos="zoom-in-right"
                 data-aos-duration="1000"
             >
@@ -22,7 +22,7 @@
                 >
             </div>
 
-            <div class="md:w-[60%] w-full space-y-8">
+            <div class="md:w-[60%] w-full min-w-0 space-y-8">
 
                 <!-- University -->
                 <div

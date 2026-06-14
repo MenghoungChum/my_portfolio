@@ -12,7 +12,7 @@
     <div class="flex flex-col md:flex-row gap-10">
 
       <!-- LEFT: Contact Info -->
-      <div class="w-full md:w-1/2 space-y-5" data-aos="fade-right">
+      <div class="w-full md:w-1/2 min-w-0 space-y-5" data-aos="fade-right">
 
         <!-- Email -->
         <div
@@ -78,7 +78,7 @@
 
       <!-- RIGHT: Contact Form -->
       <div
-        class="w-full md:w-1/2 bg-white dark:bg-gray-800 p-6 rounded-xl shadow"
+        class="w-full md:w-1/2 min-w-0 bg-white dark:bg-gray-800 p-6 rounded-xl shadow"
         data-aos="fade-left"
       >
 
