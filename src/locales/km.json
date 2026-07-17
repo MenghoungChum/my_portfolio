@@ -81,9 +81,9 @@
     {
       "id": 1,
       "name": "វេបសាយលក់ទំនិញតាមអ៊ីនធឺណិត",
-      "description": "ប្រព័ន្ធហាងអនឡាញពេញលេញ មាន cart និង UI បង់ប្រាក់។",
-      "tech": ["Vue", "Tailwind", "Node"],
-      "live": "#",
+      "description": "ប្រព័ន្ធហាងអនឡាញ មាន cart និង UI បង់ប្រាក់។",
+      "tech": ["React", "Tailwind", "Js"],
+      "live": "https://gaming-webiste-rvrr.vercel.app/",
       "github": "#"
     },
     {

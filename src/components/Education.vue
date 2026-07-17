@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="about">
         <h2
             class="text-4xl font-bold my-3 dark:text-white"
             data-aos="fade-up"
@@ -41,7 +41,7 @@
                             </h3>
 
                             <p class="text-gray-500 dark:text-gray-400 mt-1">
-                                {{translate.t('education.university.universityName')}} • 2022 - 2024
+                                {{translate.t('education.university.universityName')}} • 2024 - present
                             </p>
 
                             <ul class="mt-5 space-y-3 text-gray-700 dark:text-gray-300">
@@ -81,7 +81,7 @@
                             </h3>
 
                             <p class="text-gray-500 dark:text-gray-400 mt-1">
-                                {{translate.t('education.highSchool.SchoolName')}} • {{translate.t('education.present')}}
+                                {{translate.t('education.highSchool.SchoolName')}} • 2024
                             </p>
 
                             <ul class="mt-5 space-y-3 text-gray-700 dark:text-gray-300">

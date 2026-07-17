@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex flex-col md:flex-row gap-16 text-gray-900 dark:text-white">
+  <div id="skills" class="w-full flex flex-col md:flex-row gap-16 text-gray-900 dark:text-white">
 
     <!-- LEFT: Technical Skills -->
     <div

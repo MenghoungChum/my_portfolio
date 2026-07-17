@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full py-10">
+  <div id="works" class="w-full py-10">
 
     <!-- Title -->
     <h3
@@ -84,14 +84,15 @@
     import { useLanguage } from '../composables/useLanguage';
 
     import admin_dashboard from '../assets/admin_dashboard_banner.jpg'
-    import ecommerce_banner from '../assets/ecommerce_banner.jpg'
-    import portfolio from '../assets/portfolio_banner.jpg'
+    import ecommerce_banner from '../assets/ecommerce_banner.png'
+    import portfolio from '../assets/portfolio_banner.png'
 
     const imageIndex=[
         ecommerce_banner,
         portfolio,
         ecommerce_banner
     ]
+    
     const transition=useLanguage();
     const myProjects=computed(()=>{
         return transition.tm('projects') .map((project,index)=>({

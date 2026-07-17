@@ -64,8 +64,8 @@
     {
       "id": 1,
       "name": "E-Commerce Website",
-      "description": "Full stack online shop with cart system and payment UI.",
-      "tech": ["Vue", "Tailwind", "Node"],
+      "description": "online shop with cart system and payment UI.",
+      "tech": ["React", "Tailwind", "Js"],
       "live": "#",
       "github": "#"
     },

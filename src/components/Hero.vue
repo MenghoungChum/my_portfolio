@@ -21,17 +21,20 @@
                     data-aos="fade-up"
                     data-aos-delay="300"
                 >
-                    <p
-                        class="text-lg px-5 py-2 rounded-full border-2 border-black cursor-pointer dark:text-white dark:border-white"
+                    <a
+                        href="https://t.me/@chum_menghoung" 
+                        target="_blank"
+                        class="text-lg px-5 py-2 rounded-full border-2 border-black cursor-pointer dark:text-white dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 ease-in-out inline-block"
                     >
                         {{ translate.t("homeButton.hire") }}
-                    </p>
+                    </a>
 
                     <button
                         type="button"
+                        @click="downloadCV"
                         class="dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black text-lg px-5 py-2 rounded-full border-2 border-black cursor-pointer hover:bg-black hover:text-white transition-all duration-300 ease-in-out"
                     >
-                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                        <i class="fa-solid fa-cloud-arrow-down mr-2"></i> 
                         {{ translate.t('homeButton.download') }}
                     </button>
                 </div>
@@ -58,15 +61,31 @@
     import My_Image from '../assets/Image.jpg'
     import My_Image1 from '../assets/Image1.jpg'
     import { useSettings } from '../composables/useSettings';
-import { computed } from 'vue';
-
-
+    import { computed } from 'vue';
 
     const translate=useLanguage()
     const isDarkMode=useSettings();
     const currentImage = computed(() => {
         return isDarkMode.isDark.value ? My_Image : My_Image1
     })
+
+
+    const downloadCV = () => {
+        // 1. Path to your file inside the 'public' folder (e.g., public/resume.pdf)
+        const fileUrl = '../../public/My_CV.pdf';
+        
+        // 2. Create a temporary anchor element
+        const link = document.createElement('a')
+        link.href = fileUrl
+        
+        // 3. Set the name the file will have when downloaded
+        link.setAttribute('download', 'Menghoung_CV.pdf')
+        
+        // 4. Append to document, trigger the download, and remove it
+        document.body.appendChild(link)
+        link.click()
+        document.body.removeChild(link)
+    }
 </script>
 <style lang="">
     

@@ -16,6 +16,8 @@ const changeLanguage = (lang) => {
   locale.value = lang
   localStorage.setItem('language', lang)
 }
+
+
 </script>
 
 <template>

@@ -3,10 +3,9 @@
         <Hero/>
         <Education/>
         <Certificate/>
-        <!-- <About/> -->
-         <Skill/>
-         <Project/>
-         <Contatct/>
+        <Skill/>
+        <Project/>
+        <Contatct/>
     </div>
 </template>
 <script setup>

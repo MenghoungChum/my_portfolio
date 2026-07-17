@@ -1,11 +1,8 @@
 <template>
-  <div class="w-full py-10">
+  <div id="contact" class="w-full py-10">
 
     <!-- Title -->
-    <h3
-      class="text-3xl font-bold mb-10 text-gray-900 dark:text-white text-center"
-      data-aos="fade-up"
-    >
+    <h3 class="text-3xl font-bold mb-10 text-gray-900 dark:text-white text-center" data-aos="fade-up">
       {{ translate.t('contact.bigTitle') }}
     </h3>
 
@@ -15,11 +12,8 @@
       <div class="w-full md:w-1/2 min-w-0 space-y-5" data-aos="fade-right">
 
         <!-- Email -->
-        <div
-          class="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-md transition"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
+        <div class="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-md transition"
+          data-aos="fade-up" data-aos-delay="100">
           <div class="text-blue-500 text-xl">
             <i class="fa-regular fa-envelope"></i>
           </div>
@@ -35,11 +29,8 @@
         </div>
 
         <!-- Phone -->
-        <div
-          class="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-md transition"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
+        <div class="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-md transition"
+          data-aos="fade-up" data-aos-delay="200">
           <div class="text-green-500 text-xl">
             <i class="fa-solid fa-phone"></i>
           </div>
@@ -49,17 +40,14 @@
               {{ translate.t('contact.block2.title') }}
             </h4>
             <p class="text-sm text-gray-600 dark:text-gray-300">
-              +855 000 000 000
+              0977300938
             </p>
           </div>
         </div>
 
         <!-- Location -->
-        <div
-          class="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-md transition"
-          data-aos="fade-up"
-          data-aos-delay="300"
-        >
+        <div class="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-md transition"
+          data-aos="fade-up" data-aos-delay="300">
           <div class="text-red-500 text-xl">
             <i class="fa-solid fa-location-dot"></i>
           </div>
@@ -77,24 +65,21 @@
       </div>
 
       <!-- RIGHT: Contact Form -->
-      <div
-        class="w-full md:w-1/2 min-w-0 bg-white dark:bg-gray-800 p-6 rounded-xl shadow"
-        data-aos="fade-left"
-      >
+      <div class="w-full md:w-1/2 min-w-0 bg-white dark:bg-gray-800 p-6 rounded-xl shadow" data-aos="fade-left">
 
-        <form class="space-y-5">
+        <form class="space-y-5" @submit.prevent="sendEmail">
 
           <!-- Email -->
           <div data-aos="fade-up" data-aos-delay="100">
             <label class="text-sm text-gray-700 dark:text-gray-300">
-              {{translate.t('contact.contactField.block1.title')}}
+              {{ translate.t('contact.contactField.block1.title') }}
             </label>
 
-            <input
-              type="email"
+            <input type="email"
+              v-model="email"
+              required
               class="w-full mt-1 px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-              :placeholder="translate.t('contact.contactField.block1.placeHolder')"
-            />
+              :placeholder="translate.t('contact.contactField.block1.placeHolder')" />
           </div>
 
           <!-- Message -->
@@ -103,19 +88,17 @@
               {{ translate.t('contact.contactField.block2.title') }}
             </label>
 
-            <textarea
-              rows="5"
+            <textarea rows="5"
+              v-model="message"
+              required
               class="w-full mt-1 px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-              :placeholder="translate.t('contact.contactField.block2.placeHolder')"
-            ></textarea>
+              :placeholder="translate.t('contact.contactField.block2.placeHolder')"></textarea>
           </div>
 
           <!-- Button -->
           <div data-aos="fade-up" data-aos-delay="300">
-            <button
-              type="submit"
-              class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 rounded-lg transition"
-            >
+            <button type="submit"
+              class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 rounded-lg transition">
               {{ translate.t('contact.button') }}
             </button>
           </div>
@@ -130,6 +113,43 @@
 
 <script setup>
 import { useLanguage } from '../composables/useLanguage';
+import emailjs from '@emailjs/browser'
+import { ref } from 'vue'
 
-    const translate=useLanguage();
+const translate = useLanguage();
+const email = ref('');
+const message = ref('');
+const isSending = ref(false);
+
+const sendEmail = async () => {
+  if (!email.value || !message.value) {
+    alert('Please enter your email and message.');
+    return;
+  }
+
+  isSending.value = true;
+
+  const templateParams = {
+    user_email: email.value,
+    message: message.value
+  };
+
+  try {
+    await emailjs.send(
+      'service_mvuj6mk',
+      'template_mtautmv',
+      templateParams,
+      'JFyf4Gm9MNDW9L8_J'
+    );
+
+    alert('Message sent successfully!');
+    email.value = '';
+    message.value = '';
+  } catch (error) {
+    console.error(error);
+    alert('Failed to send message. Please try again later.');
+  } finally {
+    isSending.value = false;
+  }
+};
 </script>
