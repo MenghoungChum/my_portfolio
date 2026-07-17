@@ -22,7 +22,7 @@
                     data-aos-delay="300"
                 >
                     <a
-                        href="https://t.me/@chum_menghoung" 
+                        href="https://t.me/chum_menghoung" 
                         target="_blank"
                         class="text-lg px-5 py-2 rounded-full border-2 border-black cursor-pointer dark:text-white dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 ease-in-out inline-block"
                     >
